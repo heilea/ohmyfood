@@ -1,0 +1,121 @@
+$primaire:#9356DC;
+$secondaire:#FF79DA ;
+$terciaire:#99E2D0;
+
+
+
+@mixin flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.OMF{
+    font-family: 'Shrikhand', serif;
+}
+.title{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.subtitle{
+    font-size: 1.125rem;
+}
+header{
+    @include flexcenter;
+    height: 63px;
+   .OMF{
+    font-size: 1.875;
+   }
+}
+.location{
+    @include flexcenter;
+    gap: 17px;
+    height: 50px;
+    background-color: #EAEAEA;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.section-intro{
+    width: 100%;
+    @include flexcenter;
+    flex-direction: column;
+     .intro{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #F6F6F6;
+        text-align: center;
+     }
+     .article-step{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        margin-top: 48px;
+        
+        .step-container{
+            @include flexcenter;
+            flex-direction: column;
+            gap: 24px;
+            }
+            .step{
+                @include flexcenter;
+                gap: 15px;
+                width: 322.49px;
+                height: 72.38px;
+                background-color: #F6F6F6;
+                border-radius: 20px;
+                box-shadow: 0px 4px 15px 0px rgba(0,0,0,.15);  
+        }
+     }
+ }
+.restaurant-section{
+    width: 100%;
+    .restaurant-card-container{
+        width: 100%;
+        padding: 28px 18px;
+        display: flex;
+        flex-direction: column; 
+        gap: 18px; 
+    }
+}
+.card{
+    width: 100%;
+    height: 251px;
+    img{
+        width: 100%;
+        height: 231px;
+        object-fit: cover;
+    }
+}
+.card-content{}
+
+footer{
+    width: 100%;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    margin-top: 50px;
+    .OMF{
+        font-size: 1.125rem;
+    }
+    .footer-links-container{
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        text-decoration: none;
+        color: #F6F6F6;
+    }
+}

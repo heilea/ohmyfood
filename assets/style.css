@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.OMF {
+  font-family: "Shrikhand", serif;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+}
+header .OMF {
+  font-size: 1.875;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  height: 50px;
+  background-color: #EAEAEA;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-intro .intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  text-align: center;
+}
+.section-intro .article-step {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 48px;
+}
+.section-intro .article-step .step-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.section-intro .article-step .step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 322.49px;
+  height: 72.38px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-section {
+  width: 100%;
+}
+.restaurant-section .restaurant-card-container {
+  width: 100%;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  width: 100%;
+  height: 251px;
+}
+.card img {
+  width: 100%;
+  height: 231px;
+  object-fit: cover;
+}
+
+footer {
+  width: 100%;
+  padding: 22px 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  margin-top: 50px;
+}
+footer .OMF {
+  font-size: 1.125rem;
+}
+footer .footer-links-container {
+  display: flex;
+  flex-direction: column;
+}
+footer a {
+  text-decoration: none;
+  color: #F6F6F6;
+}
+
+/*# sourceMappingURL=style.css.map */

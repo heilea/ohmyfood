@@ -5,36 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/fa3273fa3f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap" rel="stylesheet">
+    
     <title>Ohmyfood</title>
 </head>
 <body>
     <header>
-        <div id="logo-omf"> <img src="assets/images/logo/ohmyfood.png" alt=""></div>
-        <div class="location"> 
-            <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="location-txt"> <p>Paris,Belleville</p></div>
-        </div>
-    </header>
+        <div class="logo-container"> <p class="OMF">Ohmyfood</p></div>
+   </header>
+   <aside class="location"> 
+        <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="location-txt"> <p>Paris,Belleville</p></div>
+    </aside>
+
     <main>
     <section class="section-intro"> 
-        <h1>Reservez le plat qui vous convient</h1>
         <article class="intro">
-            <h2>Découvrez des restaurants d’exception, sélectionnés par nos soins.</h2>
-            <div class="cta">
-                <p>Explorer nos restaurants</p>
-            </div>
+            <h1 class="title">Reservez le plat qui vous convient</h1>
+            <p class="subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <div class="cta">
+                    <p>Explorer nos restaurants</p>
+                </div>
         </article>
-        <article class="step-container">
-            <h2>Fonctionnement</h2>
+        <article class="article-step">
+            <h2 class="title">Fonctionnement</h2>
+            <div class="step-container">
                 <div class="step"> <i class="fa-solid fa-mobile-screen-button"></i><p>Choisissez un restaurant</p></div>
                 <div class="step"> <div><i class="fa-solid fa-ellipsis-vertical"></i><i class="fa-solid fa-bars"></i></div><p>Composez votre menu</p></div>
                 <div class="step"> <i class="fa-solid fa-store fa-xs"></i><p>Dégustez au restaurant</p></div>
+            </div>
         </article>
     </section>
 
     <section class="restaurant-section"> 
     <article>
-        <h2>Restaurants</h2>
+        <h2 class="title" >Restaurants</h2>
         <div class="restaurant-card-container">
                 <div class="card"> <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo de plat"> <div class="card-content"><p class="card-title">La palette du goût</p>
                     <p class="card-subtitle">Ménilmontant</p><i class="fa-light fa-heart"></i></div></div>
@@ -55,7 +65,7 @@
     </main>
 
     <footer>
-        <img src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
+        <p class="OMF">Ohmyfood</p>
         <div class="footer-links-container">
             <a href="">Proposer un restaurant</a>
             <a href="">Devenir partenaire</a>
