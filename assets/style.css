@@ -1,3 +1,15 @@
+.flex-center, .div-test, .card-content .new, .number-position .number, .number-position, .article-step .step, .article-step .step-container, .section-intro .intro, .section-intro, .location, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+}
+
 * {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -18,19 +30,13 @@
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 63px;
 }
 header .OMF {
-  font-size: 1.875;
+  font-size: 1.875rem;
 }
 
 .location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 17px;
   height: 50px;
   background-color: #EAEAEA;
@@ -44,38 +50,41 @@ main {
 
 .section-intro {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 .section-intro .intro {
   width: 100%;
-  display: flex;
+  padding: 39px 10px 57px 10px;
+  gap: 8px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #F6F6F6;
-  text-align: center;
+  text-align: center; /*justify pour subtitle*/
 }
-.section-intro .article-step {
+.section-intro .intro .cta {
+  width: 200px;
+}
+.section-intro .intro button {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #EAEAEA;
+  border: none;
+  background: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+}
+
+.article-step {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 26px;
   margin-top: 48px;
+  background-color: #FFFFFF;
 }
-.section-intro .article-step .step-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.article-step .step-container {
   flex-direction: column;
   gap: 24px;
 }
-.section-intro .article-step .step {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.article-step .step {
   gap: 15px;
   width: 322.49px;
   height: 72.38px;
@@ -83,26 +92,77 @@ main {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
+.article-step .step p {
+  font-weight: 500;
+}
+.article-step i {
+  color: #7E7E7E;
+}
+
+.number-position {
+  width: 100%;
+}
+.number-position .number {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 12px;
+  border-radius: 150px;
+  color: #EAEAEA;
+  background-color: #9356DC;
+}
 
 .restaurant-section {
   width: 100%;
+  margin-top: 20px;
+  background-color: #F6F6F6;
 }
 .restaurant-section .restaurant-card-container {
   width: 100%;
-  padding: 28px 18px;
+  padding: 28px 18px 66px 18px;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-
-.card {
+.restaurant-section .card {
   width: 100%;
-  height: 251px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-.card img {
+.restaurant-section .card img {
   width: 100%;
   height: 231px;
   object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card-content .new {
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  box-shadow: 0, 2, 4, 0, 0.15;
+  position: absolute;
+}
+.card-content .new p {
+  color: #008766;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.card-content i {
+  position: absolute;
+  right: 33px;
+  color: #101010;
 }
 
 footer {
@@ -110,8 +170,8 @@ footer {
   padding: 22px 25px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
   background-color: #353535;
-  margin-top: 50px;
 }
 footer .OMF {
   font-size: 1.125rem;
@@ -123,6 +183,30 @@ footer .footer-links-container {
 footer a {
   text-decoration: none;
   color: #F6F6F6;
+}
+footer a i {
+  width: 11px;
+  height: 13px;
+  margin-right: 11px;
+}
+
+.div-test {
+  height: 200px;
+}
+.div-test i {
+  position: absolute;
+}
+.div-test .fa-solid {
+  opacity: 0;
+}
+.div-test .fa-solid:hover {
+  opacity: 1;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(352deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
