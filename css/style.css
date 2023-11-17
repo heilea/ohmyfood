@@ -1,4 +1,4 @@
-.flex-center, .div-test, .card-content .new, .number-position .number, .number-position, .article-step .step, .article-step .step-container, .section-intro .intro, .section-intro, .location, header {
+.flex-center, .div-test, .restaurant-section .card .new, .number-position .number, .number-position, .article-step .step, .article-step .step-container, .section-intro .intro, .section-intro, .location, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +77,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  padding: 0px 20px;
   margin-top: 48px;
   background-color: #FFFFFF;
 }
@@ -119,7 +120,7 @@ main {
 }
 .restaurant-section .restaurant-card-container {
   width: 100%;
-  padding: 28px 18px 66px 18px;
+  padding: 28px 20px 66px 20px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -136,8 +137,7 @@ main {
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
-
-.card-content .new {
+.restaurant-section .card .new {
   width: 80px;
   height: 29px;
   border-radius: 2px;
@@ -145,7 +145,7 @@ main {
   box-shadow: 0, 2, 4, 0, 0.15;
   position: absolute;
 }
-.card-content .new p {
+.restaurant-section .card .new p {
   color: #008766;
 }
 
@@ -163,6 +163,25 @@ main {
   position: absolute;
   right: 33px;
   color: #101010;
+}
+.card-content .fa-solid:not(:hover) {
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1;
+  transition: opacity 0.8s ease-in 0.3s;
+  opacity: 0;
+}
+.card-content .fa-solid:hover {
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity 0.8s ease-in 0.3s;
 }
 
 footer {
@@ -192,21 +211,42 @@ footer a i {
 
 .div-test {
   height: 200px;
+  position: relative;
+}
+.div-test .heart-icon__animated {
+  width: 24px;
+  height: 24px;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1;
+  transition: opacity 0.8s ease-in 0.3s;
+  opacity: 0;
 }
 .div-test i {
   position: absolute;
+  width: 24px;
+  height: 24px;
 }
 .div-test .fa-solid {
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1;
+  transition: opacity 0.8s ease-in 0.3s;
   opacity: 0;
 }
 .div-test .fa-solid:hover {
-  opacity: 1;
-  color: transparent;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(352deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  opacity: 1;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity 0.8s ease-in 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

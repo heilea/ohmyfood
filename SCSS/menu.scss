@@ -1,0 +1,30 @@
+img{
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+}
+footer{
+    width: 100%;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #353535;
+    .OMF{
+        font-size: 1.125rem;
+    }
+    .footer-links-container{
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        text-decoration: none;
+        color: #F6F6F6;
+        i{
+            width: 11px;
+            height: 13px;
+            margin-right: 11px;
+        }
+    }
+}
+

@@ -70,6 +70,7 @@ main{
      display: flex;
      flex-direction: column;
      gap: 26px;
+     padding: 0px 20px;
      margin-top: 48px;
      background-color: #FFFFFF;
         
@@ -115,7 +116,7 @@ main{
     background-color: #F6F6F6;
     .restaurant-card-container{
         width: 100%;
-        padding: 28px 18px 66px 18px;
+        padding: 28px 20px 66px 20px;
         display: flex;
         flex-direction: column; 
         gap: 18px; 
@@ -130,22 +131,23 @@ main{
             height: 231px;
             object-fit: cover;
             border-radius: 15px 15px 0px 0px;    
-        }   
+        } 
+        .new{
+            @extend .flex-center;
+            width: 80px;
+            height: 29px;
+            border-radius: 2px;
+            background-color: #99E2D0;
+            box-shadow: ( 0, 2, 4, 0, 0.15);
+            position: absolute;
+            p{
+                color: #008766;
+            }  
+        }  
     }
 }   
 
-.card-content .new{
-    @extend .flex-center;
-    width: 80px;
-    height: 29px;
-    border-radius: 2px;
-    background-color: #99E2D0;
-    box-shadow: ( 0, 2, 4, 0, 0.15);
-    position: absolute;
-    p{
-        color: #008766;
-    }  
-}
+
 
 .card-title{
     font-size: 1.125rem;
@@ -160,6 +162,25 @@ main{
         position: absolute;
         right: 33px;
         color:#101010;
+    }
+    .fa-solid:not(:hover) {
+        background-image:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        line-height: 1;
+        transition: opacity 0.8s ease-in 0.3s;
+        opacity: 0; 
+    }  
+    .fa-solid:hover { 
+        background-image:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;     
+        opacity: 1;
+        line-height: 1;  
+        cursor: pointer;
+        transition: opacity 0.8s ease-in 0.3s;
     }
 }
 //.fa-regular:hover//
@@ -195,20 +216,44 @@ footer{
 .div-test{
         @extend .flex-center; 
         height: 200px;
-    i{
-        position: absolute;
-    }
-    .fa-solid{
-        opacity: 0;
-        &:hover{
-            opacity: 1;
-            color: transparent; 
+        position: relative;
+    .heart-icon__animated{
+        width: 24px;
+        height: 24px;
+        background-image:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
             background-clip: text;
             -webkit-background-clip: text;
-            background-image: linear-gradient(352deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%); 
-            -webkit-font-smoothing: antialiased;
-            -webkit-text-fill-color: transparent;  
+            color: transparent;
+            line-height: 1;
+            transition: opacity 0.8s ease-in 0.3s;
+            opacity: 0; 
+    }
+    i{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+    }
+        
+        .fa-solid{
+            background-image:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 1;
+            transition: opacity 0.8s ease-in 0.3s;
+            opacity: 0; 
         }  
-    }  
+        .fa-solid:hover { 
+            background-image:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;     
+            opacity: 1;
+            line-height: 1;  
+            cursor: pointer;
+            transition: opacity 0.8s ease-in 0.3s;
+        }
    
 }
+
+
