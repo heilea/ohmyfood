@@ -1,4 +1,4 @@
-.flex-center, .div-test, .restaurant-section .card .new, .number-position .number, .number-position, .article-step .step, .article-step .step-container, .section-intro .intro, .section-intro, .location, header {
+.flex-center, .restaurant-section .card .new, .number-position .number, .number-position, .article-step .step, .article-step .step-container, .section-intro .intro, .section-intro, .location, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +91,8 @@ main {
 }
 .article-step .step {
   gap: 15px;
-  width: 322.49px;
-  height: 72.38px;
+  width: 100%;
+  padding: 15px 30px;
   background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -217,44 +217,33 @@ footer a i {
   margin-right: 11px;
 }
 
-.div-test {
-  height: 200px;
-  position: relative;
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
-.div-test .heart-icon__animated {
-  width: 24px;
-  height: 24px;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  line-height: 1;
-  transition: opacity 0.8s ease-in 0.3s;
-  opacity: 0;
-}
-.div-test i {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-}
-.div-test .fa-solid {
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  line-height: 1;
-  transition: opacity 0.8s ease-in 0.3s;
-  opacity: 0;
-}
-.div-test .fa-solid:hover {
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  opacity: 1;
-  line-height: 1;
-  cursor: pointer;
-  transition: opacity 0.8s ease-in 0.3s;
+
+/**********Partie responsive**********/
+@media (min-width: 1024px) {
+  .section-intro .intro {
+    gap: 18px;
+  }
+  h2 {
+    margin-left: 180px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 180px;
+    column-gap: 100px;
+    row-gap: 50px;
+  }
+  .article-step .step-container {
+    flex-direction: row;
+  }
+  .article-step .number-position {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
