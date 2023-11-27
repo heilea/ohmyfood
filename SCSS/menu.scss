@@ -109,6 +109,8 @@ img{
     background-color: #F6F6F6;
     .title{
         margin-bottom: 12px;
+        margin-left: 13px;
+
         
         &::after{
             content: '';
@@ -234,3 +236,17 @@ footer{
     }
 }
 
+@media screen and (min-width: 749px){
+    .menu{
+        padding: 0px 125px;
+    }
+    .main-container{
+        margin: 0px 90px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .main-container{
+        margin: 0px 193px;
+    }
+}

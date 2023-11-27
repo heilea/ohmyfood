@@ -80,19 +80,24 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 26px;
   padding: 0px 20px;
   margin-top: 48px;
   background-color: #FFFFFF;
 }
+.article-step .title {
+  align-self: flex-start;
+}
 .article-step .step-container {
   flex-direction: column;
   gap: 24px;
+  width: 100%;
 }
 .article-step .step {
   gap: 15px;
   width: 100%;
-  padding: 15px 30px;
+  height: 72px;
   background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -224,12 +229,14 @@ footer a i {
 }
 
 /**********Partie responsive**********/
-@media (min-width: 1024px) {
+@media (min-width: 749px) {
+  .step {
+    width: inherit;
+  }
+}
+@media screen and (min-width: 1024px) {
   .section-intro .intro {
     gap: 18px;
-  }
-  h2 {
-    margin-left: 180px;
   }
   .grid {
     display: grid;
@@ -238,11 +245,15 @@ footer a i {
     column-gap: 100px;
     row-gap: 50px;
   }
+  .article-step .title {
+    align-self: flex-start;
+  }
   .article-step .step-container {
     flex-direction: row;
+    width: 78%;
   }
-  .article-step .number-position {
-    width: auto;
+  h2 {
+    margin-left: 180px;
   }
 }
 

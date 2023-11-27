@@ -114,6 +114,7 @@ img {
 }
 .menu .title {
   margin-bottom: 12px;
+  margin-left: 13px;
 }
 .menu .title::after {
   content: "";
@@ -213,6 +214,20 @@ footer a i {
   width: 11px;
   height: 13px;
   margin-right: 11px;
+}
+
+@media screen and (min-width: 749px) {
+  .menu {
+    padding: 0px 125px;
+  }
+  .main-container {
+    margin: 0px 90px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-container {
+    margin: 0px 193px;
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */
