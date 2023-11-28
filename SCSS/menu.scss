@@ -63,7 +63,6 @@ img{
             align-items: center;
             justify-content: space-between;
         }
-
             .icons{
                 i{
                     position: absolute;
@@ -97,10 +96,16 @@ img{
     .dish{
         font-weight: 500;
         font-size: 1.125rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     .subtitle{
         font-weight: 300;
         font-size: 1rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 .menu{
     display: block;
@@ -111,7 +116,6 @@ img{
         margin-bottom: 12px;
         margin-left: 13px;
 
-        
         &::after{
             content: '';
             display: block;
@@ -150,8 +154,6 @@ img{
             display: flex;
             gap: 10px;
             margin-right: -60px;
-          
-                
 
             .price{
                 display: flex;
@@ -159,7 +161,6 @@ img{
                 font-weight: 700;
                 font-size: 15px;
                 padding-bottom: 12px;  
-
             }
             .check{
                 width: 60px;
@@ -199,17 +200,6 @@ img{
     margin-top: 40px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 footer{
     width: 100%;
     padding: 22px 25px;
@@ -237,6 +227,7 @@ footer{
 }
 
 @media screen and (min-width: 749px){
+    
     .menu{
         padding: 0px 125px;
     }

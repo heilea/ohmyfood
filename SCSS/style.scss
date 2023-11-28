@@ -154,13 +154,9 @@ main{
         }  
     }
 }   
-
-
-
 .card-title{
     font-size: 1.125rem;
-    font-weight: 700;
-    
+    font-weight: 700;   
 }
 .card-content{
     display: flex;
@@ -191,11 +187,6 @@ main{
         transition: opacity 0.8s ease-in 0.3s;
     }
 }
-//.fa-regular:hover//
-
-
-
-
 footer{
     width: 100%;
     padding: 22px 25px;
@@ -222,8 +213,6 @@ footer{
     }
 }
 
-
-
 .grid{
     display: flex;
     flex-direction: column;
@@ -235,6 +224,9 @@ footer{
 @media  (min-width: 749px){
     .step{
         width: inherit;
+    }
+    .number-position{
+        width: 60%;
     }
 }
 

@@ -99,11 +99,17 @@ img {
 .dish {
   font-weight: 500;
   font-size: 1.125rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu {

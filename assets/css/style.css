@@ -233,6 +233,9 @@ footer a i {
   .step {
     width: inherit;
   }
+  .number-position {
+    width: 60%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .section-intro .intro {
