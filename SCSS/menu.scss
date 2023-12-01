@@ -7,6 +7,10 @@
     box-sizing: border-box;
     
 }
+a{
+    color: #101010;
+    text-decoration: none;
+}
 .OMF{
     font-family: 'Shrikhand', serif;
 }
@@ -21,6 +25,12 @@ header{
     align-content: center;
     justify-content: center;
 
+    .arrow{
+        
+        position: absolute;
+        left: 17px;
+        top: 13px;    
+    }
    .OMF{
     font-size: 1.875rem;
    }
@@ -54,22 +64,19 @@ img{
 
         .section_title_menu {
             margin-top: 20px;
-            position: absolute;
-            top:0;
-            bottom: 0;
-            left: 25px;
-            right: 40px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 24px;
+            position: relative;
         }
             .icons{
+                display: flex;
+                align-items: center;
                 i{
                     position: absolute;
-                    top: 10px;
-                    right: 33px;
                     color:#101010;
                     line-height: 1;
+                    right: 0px;
                 } 
                 .fa-solid:not(:hover) {
                     background-image:linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -93,20 +100,7 @@ img{
             }
     }
 
-    .dish{
-        font-weight: 500;
-        font-size: 1.125rem;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    .subtitle{
-        font-weight: 300;
-        font-size: 1rem;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
+    
 .menu{
     display: block;
     margin-bottom: 40px;
@@ -140,6 +134,7 @@ img{
         margin: 0px 15px;
         display: flex;
         justify-content: space-between;
+        gap: 45px;
         overflow: hidden;
         position: relative;
 
@@ -149,6 +144,21 @@ img{
             display: flex;
             flex-direction: column;
             gap: 5px;
+            overflow: hidden;
+            .dish{
+                font-weight: 500;
+                font-size: 1.125rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .subtitle{
+                font-weight: 300;
+                font-size: 1rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         }
         .card2{
             display: flex;
@@ -226,13 +236,36 @@ footer{
     }
 }
 
-@media screen and (min-width: 749px){
+@media screen and (min-width: 769px){
     
     .menu{
         padding: 0px 125px;
     }
     .main-container{
         margin: 0px 90px;
+    }
+
+    .header_menu{.section_title_menu{
+        position: static;
+        justify-content: center;
+        .icons{
+        i{
+            right: initial;
+        }
+    }
+    }
+    }  
+    
+    footer{
+        padding: 30px 70px 30px 25px;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 50px;
+    
+        .footer-links-container{
+            flex-direction: row;
+            gap: 30px;
+        }
     }
 }
 

@@ -12,6 +12,10 @@ button{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+a{
+    color: #101010;
+    text-decoration: none;
+}
 .OMF{
     font-family: 'Shrikhand', serif; 
   
@@ -52,7 +56,7 @@ main{
         gap: 8px;
         flex-direction: column;
         background-color: #F6F6F6;
-        text-align: center; /*justify pour subtitle*/
+        text-align: center; 
         .cta{
             width: 200px;
         }
@@ -63,6 +67,14 @@ main{
             color: #EAEAEA;
             border: none;
             background: linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        }
+        button:hover{
+            filter: brightness(1.2);
+            transition:  ease 0,4s;
+        }
+        button:not(:hover){
+            
+                transition:  ease 0.4s;
         }
      }
 }
@@ -114,7 +126,25 @@ main{
         color: #EAEAEA;
         background-color: $primaire;
      }
+     &:hover{
+        transform: scale(1.05);
+        color: #9356DC;
+        transition: ease 0.4s;
+        
+        .step:hover{
+            background-color: #F5EDFF;
+            transition: ease 0.4s;
+        }
+    }
+    &:not(:hover){
+        transition: all 0.4s
+    }
+    .step:not(:hover){
+        transition: all 0.4s
+    }
 }
+
+
 .restaurant-section{
     width: 100%;
     margin-top: 20px;
@@ -221,13 +251,25 @@ footer{
 
 /**********Partie responsive**********/
 
-@media  (min-width: 749px){
+@media  (min-width: 769px){
     .step{
         width: inherit;
     }
     .number-position{
         width: 60%;
     }
+
+footer{
+    padding: 30px 70px 30px 25px;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+
+    .footer-links-container{
+        flex-direction: row;
+        gap: 30px;
+    }
+}
 }
 
 @media screen and (min-width: 1024px){

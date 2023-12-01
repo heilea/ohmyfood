@@ -20,6 +20,11 @@ button {
   box-sizing: border-box;
 }
 
+a {
+  color: #101010;
+  text-decoration: none;
+}
+
 .OMF {
   font-family: "Shrikhand", serif;
 }
@@ -62,7 +67,7 @@ main {
   gap: 8px;
   flex-direction: column;
   background-color: #F6F6F6;
-  text-align: center; /*justify pour subtitle*/
+  text-align: center;
 }
 .section-intro .intro .cta {
   width: 200px;
@@ -74,6 +79,13 @@ main {
   color: #EAEAEA;
   border: none;
   background: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+}
+.section-intro .intro button:hover {
+  filter: brightness(1.2);
+  transition: ease 0, 4s;
+}
+.section-intro .intro button:not(:hover) {
+  transition: ease 0.4s;
 }
 
 .article-step {
@@ -120,6 +132,21 @@ main {
   border-radius: 150px;
   color: #EAEAEA;
   background-color: #9356DC;
+}
+.number-position:hover {
+  transform: scale(1.05);
+  color: #9356DC;
+  transition: ease 0.4s;
+}
+.number-position:hover .step:hover {
+  background-color: #F5EDFF;
+  transition: ease 0.4s;
+}
+.number-position:not(:hover) {
+  transition: all 0.4s;
+}
+.number-position .step:not(:hover) {
+  transition: all 0.4s;
 }
 
 .restaurant-section {
@@ -229,12 +256,22 @@ footer a i {
 }
 
 /**********Partie responsive**********/
-@media (min-width: 749px) {
+@media (min-width: 769px) {
   .step {
     width: inherit;
   }
   .number-position {
     width: 60%;
+  }
+  footer {
+    padding: 30px 70px 30px 25px;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  footer .footer-links-container {
+    flex-direction: row;
+    gap: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
