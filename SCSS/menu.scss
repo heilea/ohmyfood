@@ -84,7 +84,7 @@ img{
                     -webkit-background-clip: text;
                     color: transparent;
                     line-height: 1;
-                    transition: opacity 0.8s ease-in 0.3s;
+                    transition: opacity 0.4s ease-in 0.1s;
                     opacity: 0; 
                 }  
                 .fa-solid:hover { 
@@ -95,7 +95,7 @@ img{
                     opacity: 1;
                     line-height: 1;  
                     cursor: pointer;
-                    transition: opacity 0.8s ease-in 0.3s;
+                    transition: opacity 0.4s ease-in 0.1gits;
                 }
             }
     }
