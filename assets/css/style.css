@@ -38,6 +38,70 @@ a {
   font-size: 1.125rem;
 }
 
+.loader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eed1e1;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: loader 2.5s linear forwards;
+}
+.loader .welcome {
+  font-size: 20px;
+}
+.loader .welcome .fa-circle {
+  display: inline-block;
+  color: #9356DC;
+  animation: pulse 1s reverse infinite;
+  padding-left: 15px;
+}
+.loader .welcome .fa-circle:nth-child(1) {
+  animation-delay: 0.1s;
+  color: #9356DC;
+}
+.loader .welcome .fa-circle:nth-child(2) {
+  animation-delay: 0.2s;
+  color: #fff;
+}
+.loader .welcome .fa-circle:nth-child(3) {
+  animation-delay: 0.3s;
+  color: #9356DC;
+}
+.loader .welcome .fa-circle:nth-child(4) {
+  animation-delay: 0.4s;
+  color: #fff;
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
+  95% {
+    z-index: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.8);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+
 header {
   height: 63px;
 }
@@ -82,10 +146,10 @@ main {
 }
 .section-intro .intro button:hover {
   filter: brightness(1.2);
-  transition: ease 0, 4s;
+  transition: 1s;
 }
 .section-intro .intro button:not(:hover) {
-  transition: ease 0.4s;
+  transition: 0.4s;
 }
 
 .article-step {
@@ -135,12 +199,14 @@ main {
 }
 .number-position:hover {
   transform: scale(1.05);
-  color: #9356DC;
   transition: ease 0.4s;
 }
 .number-position:hover .step:hover {
   background-color: #F5EDFF;
   transition: ease 0.4s;
+}
+.number-position:hover .step:hover i {
+  color: #9356DC;
 }
 .number-position:not(:hover) {
   transition: all 0.4s;
@@ -240,7 +306,6 @@ footer .footer-links-container {
   flex-direction: column;
 }
 footer a {
-  text-decoration: none;
   color: #F6F6F6;
 }
 footer a i {

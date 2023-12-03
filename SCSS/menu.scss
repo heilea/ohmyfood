@@ -69,7 +69,8 @@ img{
             gap: 24px;
             position: relative;
         }
-            .icons{
+
+        .icons{
                 display: flex;
                 align-items: center;
                 i{
@@ -98,9 +99,7 @@ img{
                     transition: opacity 0.4s ease-in 0.1s;
                 }
             }
-    }
-
-    
+}   
 .menu{
     display: block;
     margin-bottom: 40px;
@@ -185,16 +184,54 @@ img{
         } 
         &:hover .card2 {
             transform: translateX(-60px);
-            transition: transform 0.8s ease-in; 
+            transition: transform 0.5s ease-in-out; 
         }
         
         &:not(:hover) .card2 {
             transform: translateX(0);
-                        transition: transform 0.8s ease-in;           
+                        transition: transform 0.5s ease-in-out;           
         }
     
     }
    
+}
+
+/*animation loading*/
+
+.card_container,h2{
+    margin: 40px 13px;
+    animation: transition 1.5s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.transition2 {
+    animation: transition 1.5s ease-out 1.5s forwards;
+    opacity: 0;
+}
+
+.transition3 {
+    animation: transition 1.5s ease-out 2.5s forwards;
+    opacity: 0;
+}
+
+/* keyframes*/
+
+@keyframes transition {
+    0% { 
+    opacity: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% { 
+     opacity: 1;
+     margin-left: 13px;
+     margin-right: 13px;
+    }
 }
 
 .CTA {
@@ -226,7 +263,6 @@ footer{
         flex-direction: column;
     }
     a{
-        text-decoration: none;
         color: #F6F6F6;
         i{
             width: 11px;
