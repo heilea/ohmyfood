@@ -4,14 +4,15 @@
   align-items: center;
 }
 
-.bg-red {
-  background-color: red;
-}
-
 * {
   margin: 0;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+}
+
+a {
+  color: #101010;
+  text-decoration: none;
 }
 
 .OMF, .header_menu h1 {
@@ -27,6 +28,11 @@ header {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+header .arrow {
+  position: absolute;
+  left: 17px;
+  top: 13px;
 }
 header .OMF, header .header_menu h1, .header_menu header h1 {
   font-size: 1.875rem;
@@ -60,21 +66,20 @@ img {
 }
 .header_menu .section_title_menu {
   margin-top: 20px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 25px;
-  right: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+}
+.header_menu .icons {
+  display: flex;
+  align-items: center;
 }
 .header_menu .icons i {
   position: absolute;
-  top: 10px;
-  right: 33px;
   color: #101010;
   line-height: 1;
+  right: 0px;
 }
 .header_menu .icons .fa-solid:not(:hover) {
   background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -82,7 +87,7 @@ img {
   -webkit-background-clip: text;
   color: transparent;
   line-height: 1;
-  transition: opacity 0.8s ease-in 0.3s;
+  transition: opacity 0.4s ease-in 0.1s;
   opacity: 0;
 }
 .header_menu .icons .fa-solid:hover {
@@ -93,23 +98,7 @@ img {
   opacity: 1;
   line-height: 1;
   cursor: pointer;
-  transition: opacity 0.8s ease-in 0.3s;
-}
-
-.dish {
-  font-weight: 500;
-  font-size: 1.125rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 1rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: opacity 0.4s ease-in 0.1s;
 }
 
 .menu {
@@ -142,6 +131,7 @@ img {
   margin: 0px 15px;
   display: flex;
   justify-content: space-between;
+  gap: 45px;
   overflow: hidden;
   position: relative;
 }
@@ -151,6 +141,21 @@ img {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  overflow: hidden;
+}
+.menu .card .card1 .dish {
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu .card .card1 .subtitle {
+  font-weight: 300;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu .card .card2 {
   display: flex;
@@ -176,13 +181,46 @@ img {
 }
 .menu .card:hover .card2 {
   transform: translateX(-60px);
-  transition: transform 0.8s ease-in;
+  transition: transform 0.5s ease-in-out;
 }
 .menu .card:not(:hover) .card2 {
   transform: translateX(0);
-  transition: transform 0.8s ease-in;
+  transition: transform 0.5s ease-in-out;
 }
 
+/*animation loading*/
+.card_container, h2 {
+  margin: 40px 13px;
+  animation: transition 1.5s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.transition2 {
+  animation: transition 1.5s ease-out 1.5s forwards;
+  opacity: 0;
+}
+
+.transition3 {
+  animation: transition 1.5s ease-out 2.5s forwards;
+  opacity: 0;
+}
+
+/* keyframes*/
+@keyframes transition {
+  0% {
+    opacity: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+}
 .CTA {
   display: block;
   border-radius: 25px;
@@ -213,7 +251,6 @@ footer .footer-links-container {
   flex-direction: column;
 }
 footer a {
-  text-decoration: none;
   color: #F6F6F6;
 }
 footer a i {
@@ -222,12 +259,29 @@ footer a i {
   margin-right: 11px;
 }
 
-@media screen and (min-width: 749px) {
+@media screen and (min-width: 769px) {
   .menu {
     padding: 0px 125px;
   }
   .main-container {
     margin: 0px 90px;
+  }
+  .header_menu .section_title_menu {
+    position: static;
+    justify-content: center;
+  }
+  .header_menu .section_title_menu .icons i {
+    right: initial;
+  }
+  footer {
+    padding: 30px 70px 30px 25px;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  footer .footer-links-container {
+    flex-direction: row;
+    gap: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
