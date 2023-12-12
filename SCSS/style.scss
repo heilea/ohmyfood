@@ -233,6 +233,10 @@ main{
         flex-direction: column; 
         gap: 18px; 
     }
+    .card:hover{
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+        filter: brightness(1.1);
+    }
     .card{
         width: 100%;
         background-color: #FFFFFF;
@@ -244,23 +248,26 @@ main{
             height: 231px;
             object-fit: cover;
             border-radius: 15px 15px 0px 0px;    
-        } 
+        }  
+    }
+    
         .new{
             @extend .flex-center;
             width: 80px;
             height: 29px;
             border-radius: 2px;
             background-color: #99E2D0;
-            box-shadow: ( 0, 2, 4, 0, 0.15);
+            box-shadow: 0px 2px 4px 0px rgba( 0,0,0,0.15);
             position: absolute;
             right: 10px;
             top: 10px;
             p{
                 color: #008766;
             }  
-        }  
-    }
-}   
+        } 
+}  
+
+
 .card-title{
     font-size: 1.125rem;
     font-weight: 700;   

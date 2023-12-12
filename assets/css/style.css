@@ -1,4 +1,4 @@
-.flex-center, .restaurant-section .card .new, .number-position .number, .number-position, .article-step .step, .article-step .step-container, .section-intro .intro, .section-intro, .location, header {
+.flex-center, .restaurant-section .new, .number-position .number, .number-position, .article-step .step, .article-step .step-container, .section-intro .intro, .section-intro, .location, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,6 +223,10 @@ main {
   flex-direction: column;
   gap: 18px;
 }
+.restaurant-section .card:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.1);
+}
 .restaurant-section .card {
   width: 100%;
   background-color: #FFFFFF;
@@ -236,17 +240,17 @@ main {
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurant-section .card .new {
+.restaurant-section .new {
   width: 80px;
   height: 29px;
   border-radius: 2px;
   background-color: #99E2D0;
-  box-shadow: 0, 2, 4, 0, 0.15;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   position: absolute;
   right: 10px;
   top: 10px;
 }
-.restaurant-section .card .new p {
+.restaurant-section .new p {
   color: #008766;
 }
 
