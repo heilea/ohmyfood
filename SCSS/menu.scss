@@ -132,10 +132,10 @@ img{
         border-radius: 15px;
         margin: 0px 15px;
         display: flex;
-        justify-content: space-between;
-        gap: 45px;
         overflow: hidden;
         position: relative;
+
+       
 
         .card1{
             padding: 12px 18px 12px 10px;
@@ -144,7 +144,10 @@ img{
             flex-direction: column;
             gap: 5px;
             overflow: hidden;
+    
             .dish{
+                width: 100%;
+                display: block;
                 font-weight: 500;
                 font-size: 1.125rem;
                 text-overflow: ellipsis;
@@ -152,6 +155,8 @@ img{
                 overflow: hidden;
             }
             .subtitle{
+                width: 100%;
+                display: block;
                 font-weight: 300;
                 font-size: 1rem;
                 text-overflow: ellipsis;
@@ -160,9 +165,11 @@ img{
             }
         }
         .card2{
+           
             display: flex;
             gap: 10px;
             margin-right: -60px;
+            
 
             .price{
                 display: flex;
@@ -184,7 +191,7 @@ img{
         } 
         &:hover .card2 {
             transform: translateX(-60px);
-            transition: transform 0.5s ease-in-out; 
+            transition: transform 0.5s ease-in-out;  
         }
         
         &:not(:hover) .card2 {
@@ -193,7 +200,23 @@ img{
         }
     
     }
-   
+    .card:hover .dish{
+        width: calc(100% - 60px);
+        transition-duration: 200ms;
+        transition: width 400ms ease-in-out;
+    }
+    .card:hover .subtitle{
+        width: calc(100% - 60px);
+        transition: width 400ms ease-in-out;
+    } 
+    .card:not(hover) .dish{
+        width: calc(100% + 60px);
+        transition: width 400ms ease-in-out;
+    }   
+    .card:not(hover) .subtitle{
+        width: calc(100% + 60px);
+        transition: width 400ms ease-in-out;
+    }  
 }
 
 /*animation loading*/

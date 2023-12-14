@@ -130,8 +130,6 @@ img {
   border-radius: 15px;
   margin: 0px 15px;
   display: flex;
-  justify-content: space-between;
-  gap: 45px;
   overflow: hidden;
   position: relative;
 }
@@ -144,6 +142,8 @@ img {
   overflow: hidden;
 }
 .menu .card .card1 .dish {
+  width: 100%;
+  display: block;
   font-weight: 500;
   font-size: 1.125rem;
   text-overflow: ellipsis;
@@ -151,6 +151,8 @@ img {
   overflow: hidden;
 }
 .menu .card .card1 .subtitle {
+  width: 100%;
+  display: block;
   font-weight: 300;
   font-size: 1rem;
   text-overflow: ellipsis;
@@ -186,6 +188,23 @@ img {
 .menu .card:not(:hover) .card2 {
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
+}
+.menu .card:hover .dish {
+  width: calc(100% - 60px);
+  transition-duration: 200ms;
+  transition: width 400ms ease-in-out;
+}
+.menu .card:hover .subtitle {
+  width: calc(100% - 60px);
+  transition: width 400ms ease-in-out;
+}
+.menu .card:not(hover) .dish {
+  width: calc(100% + 60px);
+  transition: width 400ms ease-in-out;
+}
+.menu .card:not(hover) .subtitle {
+  width: calc(100% + 60px);
+  transition: width 400ms ease-in-out;
 }
 
 /*animation loading*/
